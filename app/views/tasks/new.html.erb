@@ -1,0 +1,6 @@
+Create New Task:
+<%= form_for(@task) do |form| %>
+  <%= form.text_field :title %>
+  <%= form.text_area :body %>
+  <%= form.submit "Create" %>
+<% end %>

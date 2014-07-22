@@ -1,0 +1,17 @@
+<h1>Tasks!</h1>
+
+<%= link_to "Create a task", new_task_path(@task) %>
+
+<div>
+  <% current_user.tasks.each do |task| %>
+    <div class="title">
+      Title:
+      <%= task.title %>
+    </div> 
+    <div class="task-body">
+      Body:
+      <%= task.body %>
+    </div>
+  <% end %>
+</div>
+
