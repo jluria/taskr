@@ -12,6 +12,9 @@
       Body:
       <%= task.body %>
     </div>
+    <div>
+      <%= link_to "Edit", edit_task_path(task) %>
+      <%= link_to "Done", task, method: :delete %>
   <% end %>
 </div>
 

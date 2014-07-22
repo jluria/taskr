@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   end
 
   root "homes#show"
-  resources :tasks, only: [:new, :create]
+  resources :tasks, only: [:new, :create, :edit, :update, :destroy]
   resource :session, only: [:new, :create, :destroy]
   resources :users, only: [:new, :create]
 end
