@@ -1,8 +1,15 @@
 <h1>Tasks!</h1>
 
-<%= link_to "Create a task", new_task_path(@task) %>
+<%= form_for(@task) do |form| %>
+  Title
+  <%= form.text_field :title %>
+  Body
+  <%= form.text_field :body %>
+  <%= form.submit %>
+<% end %>
 
-<div>
+
+    <div id="main-content">
   <% current_user.tasks.each do |task| %>
     <%= div_for(task) do %>
       <div class="title">
@@ -16,9 +23,10 @@
       <div>
         <%= link_to "Edit", edit_task_path(task) %>
         <%= link_to "Done", task, method: :delete %>
-      </div>
+    </div>
     <% end %>
   <% end %>
-  
-</div>
+   </div>
+
+
 

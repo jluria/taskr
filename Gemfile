@@ -12,3 +12,4 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem 'monban', '~> 0.1.0'
 gem 'monban-generators', '~> 0.0.3'
+gem 'rails-ajax'
